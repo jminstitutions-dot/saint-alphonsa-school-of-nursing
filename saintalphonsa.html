@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Alphonsa School of Nursing | GNM Program</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for professional imagery -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for professional look and feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            /* Using a darker blue for a more professional, medical tone */
+            background-image: linear-gradient(rgba(0, 48, 87, 0.85), rgba(0, 48, 87, 0.75)), url('https://placehold.co/1920x800/003057/ffffff?text=The+Art+of+Nursing');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+        }
+        .blue-gradient {
+            background: linear-gradient(to right, #004785, #0069a5);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <!-- Logo Image (Placeholder) -->
+                    <a href="#" class="flex items-center">
+                        <img src="https://placehold.co/200x50/004785/ffffff?text=SASN+Logo" alt="Saint Alphonsa School of Nursing Logo" class="h-12 w-auto mr-3 rounded-lg shadow-md"/>
+                    </a>
+                </div>
+                <div class="-mr-2 -my-2 md:hidden">
+                    <button id="menu-button" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500" aria-expanded="false">
+                        <!-- Menu Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                    </button>
+                </div>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#home" class="text-base font-medium text-gray-500 hover:text-blue-800 transition duration-150 ease-in-out">Home</a>
+                    <a href="#message" class="text-base font-medium text-gray-500 hover:text-blue-800 transition duration-150 ease-in-out">Chairman's Message</a>
+                    <a href="#programs" class="text-base font-medium text-gray-500 hover:text-blue-800 transition duration-150 ease-in-out">GNM Program</a>
+                    <a href="#admissions" class="text-base font-medium text-gray-500 hover:text-blue-800 transition duration-150 ease-in-out">Admissions</a>
+                    <a href="#contact" class="text-base font-medium text-gray-500 hover:text-blue-800 transition duration-150 ease-in-out">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (initially hidden) -->
+        <div id="mobile-menu" class="hidden absolute top-full inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                <div class="pt-5 pb-6 px-5">
+                    <nav class="grid gap-y-8">
+                        <a href="#home" class="mobile-nav-link -m-3 p-3 flex items-center rounded-md hover:bg-gray-50">Home</a>
+                        <a href="#message" class="mobile-nav-link -m-3 p-3 flex items-center rounded-md hover:bg-gray-50">Chairman's Message</a>
+                        <a href="#programs" class="mobile-nav-link -m-3 p-3 flex items-center rounded-md hover:bg-gray-50">GNM Program</a>
+                        <a href="#admissions" class="mobile-nav-link -m-3 p-3 flex items-center rounded-md hover:bg-gray-50">Admissions</a>
+                        <a href="#contact" class="mobile-nav-link -m-3 p-3 flex items-center rounded-md hover:bg-gray-50">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg py-24 sm:py-32 section-padding">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Expert Training in General Nursing & <span class="text-teal-300">Midwifery (GNM)</span>
+                </h1>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+                    Saint Alphonsa School of Nursing: Dedicated to academic excellence and ethical professionalism in healthcare, focused on our premier GNM program.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#admissions" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-blue-800 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                        Apply Now
+                    </a>
+                    <a href="#programs" class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-base font-medium rounded-xl shadow-lg text-white hover:bg-teal-500 hover:border-teal-500 transition duration-300 transform hover:scale-105">
+                        Explore GNM Details
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Chairman's Message Section -->
+        <section id="message" class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-3 lg:gap-12 items-center">
+                    <!-- Image/Signature Column -->
+                    <div class="col-span-1 mb-8 lg:mb-0 text-center">
+                        <img src="https://placehold.co/300x350/E0F2F7/004785?text=Mr.+Dennis+T+Varghese" alt="Chairman Mr. Dennis T Varghese" class="rounded-2xl w-48 h-auto mx-auto shadow-2xl ring-4 ring-blue-100 object-cover">
+                        <h4 class="mt-4 text-xl font-bold text-blue-800">Mr. Dennis T Varghese</h4>
+                        <p class="text-teal-600 text-sm">Chairman, SASN</p>
+                    </div>
+
+                    <!-- Message Content Column -->
+                    <div class="col-span-2">
+                        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase">LEADERSHIP VISION</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            A Message from the Chairman
+                        </p>
+                        <blockquote class="mt-6 text-lg text-gray-600 border-l-4 border-teal-500 pl-4 italic bg-gray-50 p-4 rounded-lg">
+                            <p class="mb-4">
+                                "Our commitment at Saint Alphonsa School of Nursing is clear: to cultivate nurses who are not only clinically proficient but are also defined by their deep sense of **compassion and ethical duty**. The healthcare landscape is constantly evolving, and through our dedicated GNM program, we ensure every student is equipped with the foundational knowledge and resilience required to excel in this noble profession. We invite you to join us in building a future where quality healthcare meets true humanity."
+                            </p>
+                            <p class="text-right font-semibold text-blue-800">— Dennis T Varghese</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section (Features) -->
+        <section id="about" class="section-padding bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center">
+                    <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase">OUR VALUES</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Foundations of Professional Nursing
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                        We prepare dynamic nursing professionals ready to lead in diverse healthcare settings worldwide, guided by three core principles.
+                    </p>
+                </div>
+
+                <div class="mt-10">
+                    <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                        <!-- Feature 1: Compassion -->
+                        <div class="relative transition duration-300 ease-in-out p-6 rounded-xl blue-gradient text-white shadow-xl card-hover">
+                            <div class="text-3xl font-extrabold mb-2" data-lucide="heart-handshake"></div>
+                            <p class="text-lg leading-6 font-bold">Compassionate Care</p>
+                            <p class="mt-2 text-base text-blue-100">
+                                We instill empathy and patient-centered approaches as core principles of nursing practice.
+                            </p>
+                        </div>
+                        <!-- Feature 2: Excellence -->
+                        <div class="relative transition duration-300 ease-in-out p-6 rounded-xl bg-white shadow-xl card-hover border border-gray-200">
+                            <div class="text-3xl font-extrabold text-blue-800 mb-2" data-lucide="graduation-cap"></div>
+                            <p class="text-lg leading-6 font-bold text-gray-900">Academic Rigor</p>
+                            <p class="mt-2 text-base text-gray-600">
+                                Our GNM curriculum combines cutting-edge theory with extensive, supervised clinical training.
+                            </p>
+                        </div>
+                        <!-- Feature 3: Professionalism -->
+                        <div class="relative transition duration-300 ease-in-out p-6 rounded-xl bg-white shadow-xl card-hover border border-gray-200">
+                            <div class="text-3xl font-extrabold text-blue-800 mb-2" data-lucide="stethoscope"></div>
+                            <p class="text-lg leading-6 font-bold text-gray-900">Ethical Practice</p>
+                            <p class="mt-2 text-base text-gray-600">
+                                Graduates are prepared to meet the highest ethical and professional standards in the medical field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Programs Section (Focused on GNM) -->
+        <section id="programs" class="section-padding bg-blue-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase">OUR ONLY PROGRAM</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        General Nursing & Midwifery (GNM)
+                    </p>
+                    <p class="mt-4 max-w-3xl text-xl text-gray-500 lg:mx-auto">
+                        The GNM program provides a rigorous, skill-focused foundation for compassionate mid-level healthcare practitioners.
+                    </p>
+                </div>
+
+                <div class="mt-12 bg-white rounded-2xl shadow-2xl overflow-hidden p-8 md:p-12 border-t-8 border-teal-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                        <!-- GNM Overview -->
+                        <div class="lg:col-span-2">
+                            <h3 class="text-3xl font-extrabold text-blue-800 mb-4 flex items-center">
+                                <span data-lucide="hand-platter" class="w-8 h-8 mr-3 text-teal-500"></span> GNM Program Overview
+                            </h3>
+                            <p class="text-gray-600 mb-6">
+                                The General Nursing and Midwifery (GNM) diploma course is designed to train students in comprehensive patient care, preventive health, and midwifery. This program is highly practical, ensuring graduates possess the essential clinical skills needed immediately upon entering the workforce in hospitals, clinics, and community settings.
+                            </p>
+                            
+                            <h4 class="text-xl font-bold text-gray-800 mt-6 mb-3 border-b pb-1">Curriculum Highlights</h4>
+                            <ul class="space-y-3 text-gray-700 list-none pl-0">
+                                <li class="flex items-start">
+                                    <span data-lucide="check-circle" class="w-5 h-5 mr-3 text-teal-500 flex-shrink-0"></span>
+                                    **Medical-Surgical Nursing:** Advanced training in critical care and surgical patient management.
+                                </li>
+                                <li class="flex items-start">
+                                    <span data-lucide="check-circle" class="w-5 h-5 mr-3 text-teal-500 flex-shrink-0"></span>
+                                    **Community Health Nursing:** Focus on public health initiatives and rural healthcare delivery.
+                                </li>
+                                <li class="flex items-start">
+                                    <span data-lucide="check-circle" class="w-5 h-5 mr-3 text-teal-500 flex-shrink-0"></span>
+                                    **Midwifery & Pediatric Care:** Specialized clinical rotations focusing on maternal and child health.
+                                </li>
+                                <li class="flex items-start">
+                                    <span data-lucide="check-circle" class="w-5 h-5 mr-3 text-teal-500 flex-shrink-0"></span>
+                                    **Psychiatric Nursing:** Understanding mental health needs and therapeutic communication.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Details Sidebar -->
+                        <div class="lg:col-span-1 p-6 rounded-xl bg-blue-800 text-white shadow-inner">
+                            <h4 class="text-2xl font-extrabold text-teal-300 mb-6">Key Program Details</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <div class="flex items-center mb-1">
+                                        <span data-lucide="calendar" class="w-5 h-5 mr-3 text-teal-300"></span>
+                                        <p class="font-bold text-lg">Duration</p>
+                                    </div>
+                                    <p class="text-blue-200 ml-8">3 years (including 6 months of internship)</p>
+                                </div>
+                                <div>
+                                    <div class="flex items-center mb-1">
+                                        <span data-lucide="user-check" class="w-5 h-5 mr-3 text-teal-300"></span>
+                                        <p class="font-bold text-lg">Eligibility</p>
+                                    </div>
+                                    <p class="text-blue-200 ml-8">10+2 (Arts/Science/Commerce) from a recognized board.</p>
+                                </div>
+                                <div>
+                                    <div class="flex items-center mb-1">
+                                        <span data-lucide="users" class="w-5 h-5 mr-3 text-teal-300"></span>
+                                        <p class="font-bold text-lg">Annual Intake</p>
+                                    </div>
+                                    <p class="text-blue-200 ml-8">Limited seats available. Selection based on merit and interview.</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 text-center">
+                                <a href="#admissions" class="inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-bold rounded-xl shadow-lg text-blue-800 bg-teal-300 hover:bg-teal-400 transition duration-300">
+                                    Begin Your GNM Application
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admissions CTA Section -->
+        <section id="admissions" class="bg-teal-600 section-padding">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                    Ready to Start Your Nursing Career?
+                </h2>
+                <p class="mt-4 text-xl text-teal-100 max-w-2xl mx-auto">
+                    Admissions for the upcoming academic year are now open for the GNM program. Download our prospectus and begin your journey today!
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-teal-600 bg-white hover:bg-gray-100 transition duration-300">
+                        Download Prospectus
+                    </a>
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-base font-medium rounded-xl shadow-lg text-white hover:bg-blue-800 hover:border-blue-800 transition duration-300">
+                        Contact Admissions Office
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="bg-gray-900 text-white section-padding pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8">
+                <!-- Branding -->
+                <div>
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4">Saint Alphonsa</h3>
+                    <p class="text-gray-400 text-sm">School of Nursing</p>
+                    <p class="mt-2 text-gray-500 text-xs">A commitment to health and humanity.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-teal-400">Home</a></li>
+                        <li><a href="#message" class="text-gray-400 hover:text-teal-400">Chairman's Message</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-teal-400">GNM Program Details</a></li>
+                        <li><a href="#admissions" class="text-gray-400 hover:text-teal-400">Admissions</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start">
+                            <span data-lucide="map-pin" class="w-5 h-5 mr-3 text-teal-400 flex-shrink-0"></span>
+                            <p class="text-gray-400">123 Nursing Parkway, Health City, SA - 90001</p>
+                        </li>
+                        <li class="flex items-center">
+                            <span data-lucide="mail" class="w-5 h-5 mr-3 text-teal-400 flex-shrink-0"></span>
+                            <a href="mailto:admissions@sasn.edu" class="text-gray-400 hover:text-teal-400">admissions@sasn.edu</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span data-lucide="phone" class="w-5 h-5 mr-3 text-teal-400 flex-shrink-0"></span>
+                            <a href="tel:+1234567890" class="text-gray-400 hover:text-teal-400">(123) 456-7890</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Map Placeholder -->
+                <div class="rounded-xl overflow-hidden h-40 bg-gray-700 flex items-center justify-center">
+                    <p class="text-gray-400 text-sm p-4 text-center">Location Map Placeholder (Hospital Affiliations)</p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-500">
+                    &copy; 2024 Saint Alphonsa School of Nursing. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+            // Toggle mobile menu visibility
+            menuButton.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                menuButton.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
