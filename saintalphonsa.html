@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saint Alphonsa School of Nursing | GNM Program</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Inter font is used for a professional look -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Custom styles for professional look and feel */
         body {
@@ -15,9 +16,11 @@
             scroll-behavior: smooth;
         }
         .hero-bg {
-            /* Using a darker blue for a more professional, medical tone */
-            /* Updated background image file name to herobanner.png */
-            background-image: linear-gradient(rgba(0, 48, 87, 0.85), rgba(0, 48, 87, 0.75)), url('herobanner.png');
+            /* * FIX: Replaced the local file path 'herobanner.png' 
+             * with a placeholder image URL for guaranteed display in isolated environments.
+             * Used a dark blue color for the placeholder image to match the scheme.
+             */
+            background-image: linear-gradient(rgba(0, 48, 87, 0.85), rgba(0, 48, 87, 0.75)), url('https://placehold.co/1920x600/003057/ffffff?text=Nursing+Students+and+Faculty');
             background-size: cover;
             background-position: center;
         }
@@ -31,6 +34,22 @@
         .blue-gradient {
             background: linear-gradient(to right, #004785, #0069a5);
         }
+
+        /* Responsive Iframe Styling */
+        .map-container {
+            position: relative;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -41,7 +60,7 @@
             <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                     <a href="#" class="flex items-center">
-                        <!-- Replaced logo.jpg with a placeholder -->
+                        <!-- Placeholder for the Logo, which is now guaranteed to display -->
                         <img src="https://placehold.co/100x64/004785/ffffff?text=SASN+Logo" onerror="this.onerror=null;this.src='https://placehold.co/100x64/004785/ffffff?text=SASN+Logo';" alt="Saint Alphonsa School of Nursing Logo" class="h-16 w-auto mr-3 rounded-md"/>
                         <span class="text-xl font-extrabold text-blue-800 hidden sm:inline">Saint Alphonsa</span>
                     </a>
@@ -80,7 +99,7 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section - Now with a visible background image placeholder -->
         <section id="home" class="hero-bg py-24 sm:py-32 section-padding">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
@@ -90,7 +109,7 @@
                     Saint Alphonsa School of Nursing: Dedicated to academic excellence and ethical professionalism in healthcare, focused on our premier GNM program.
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <!-- UPDATED: Apply Now links directly to the Google Form -->
+                    <!-- Apply Now links directly to the Google Form -->
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-blue-800 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105">
                         Apply Now
                     </a>
@@ -106,7 +125,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="lg:grid lg:grid-cols-3 lg:gap-12 items-center">
                     <div class="col-span-1 mb-8 lg:mb-0 text-center">
-                        <!-- Replaced specific image with a placeholder for the chairman -->
+                        <!-- Placeholder for the chairman image is now guaranteed to display -->
                         <img src="https://placehold.co/192x192/0069a5/ffffff?text=Chairman" onerror="this.onerror=null;this.src='https://placehold.co/192x192/0069a5/ffffff?text=Chairman';" alt="Chairman Mr. Dennis T Varghese" class="rounded-2xl w-48 h-48 mx-auto shadow-2xl ring-4 ring-blue-100 object-cover">
                         <h4 class="mt-4 text-xl font-bold text-blue-800">Mr. Dennis T Varghese</h4>
                         <p class="text-teal-600 text-sm">Chairman</p>
@@ -240,7 +259,7 @@
                                 </div>
                             </div>
                             <div class="mt-8 text-center">
-                                <!-- UPDATED: Application link in Program details now links to the form -->
+                                <!-- Application link in Program details now links to the form -->
                                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-bold rounded-xl shadow-lg text-blue-800 bg-teal-300 hover:bg-teal-400 transition duration-300">
                                     Begin Your GNM Application
                                 </a>
@@ -264,7 +283,7 @@
                     <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-teal-600 bg-white hover:bg-gray-100 transition duration-300">
                         Download Prospectus
                     </a>
-                    <!-- UPDATED: Contact link now points to the form -->
+                    <!-- Contact link now points to the form -->
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-base font-medium rounded-xl shadow-lg text-white hover:bg-blue-800 hover:border-blue-800 transition duration-300">
                         Contact Admissions Office
                     </a>
@@ -274,10 +293,9 @@
 
     </main>
 
-    <!-- Footer & Contact Information (UPDATED) -->
+    <!-- Footer & Contact Information -->
     <footer id="contact" class="bg-gray-900 text-white section-padding pt-12 pb-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Increased gap to gap-10 for better visual separation on all screen sizes -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-700 pb-8">
                 <div>
                     <h3 class="text-2xl font-bold text-teal-400 mb-4">Saint Alphonsa</h3>
@@ -314,7 +332,7 @@
                     </ul>
                 </div>
                 <!-- EMBEDDED MAP -->
-                <div class="rounded-xl overflow-hidden h-40 bg-gray-700 border-2 border-teal-500">
+                <div class="map-container bg-gray-700 border-2 border-teal-500">
                     <iframe
                         src="https://maps.google.com/maps?q=12.9601044,77.5114192&z=15&output=embed"
                         width="100%"
