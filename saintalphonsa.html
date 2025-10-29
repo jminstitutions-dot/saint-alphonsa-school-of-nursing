@@ -13,15 +13,20 @@
             scroll-behavior: smooth;
         }
         
-        /* Primary Color is Crimson for attention */
+        /* Primary Color is Crimson/Maroon (#A51C30) for Theme Elements */
         .primary-color {
-            background-color: #A51C30; /* Crimson */
+            background-color: #A51C30; /* Crimson/Maroon */
         }
         .text-primary-color {
             color: #A51C30;
         }
         .border-primary-color {
             border-color: #A51C30;
+        }
+
+        /* The header-bg-color definition is kept but unused by the main nav bar now. */
+        .header-bg-color {
+            background-color: #3A244C; /* Deep Blackish Violet */
         }
         
         /* Hero Section Adjustments */
@@ -50,57 +55,40 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- UPDATED: Top Contact Banner (Crimson Background) -->
-    <!-- ADDED: border-b border-white for the separator line -->
-    <div class="primary-color text-white hidden md:block border-b border-white">
+    <!-- UPDATED: Top Contact Banner (Uses White background, Crimson text) --><div class="bg-white text-primary-color hidden md:block border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-sm">
             
-            <!-- Left Side: Email and Phone Contacts -->
-            <div class="flex items-center space-x-6">
-                <!-- Email Contact -->
-                <div class="flex items-center space-x-2">
-                    <!-- Icon: Mail -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <!-- Left Side: Email and Phone Contacts --><div class="flex items-center space-x-6">
+                <!-- Email Contact --><div class="flex items-center space-x-2">
+                    <!-- Icon: Mail (Inherits text-primary-color) --><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     <a href="mailto:admissions.saintalphonsa@gmail.com" class="hover:underline">admissions.saintalphonsa@gmail.com</a>
                 </div>
 
-                <!-- Phone Contact -->
-                <div class="flex items-center space-x-2">
-                    <!-- Icon: Phone -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <!-- Phone Contact --><div class="flex items-center space-x-2">
+                    <!-- Icon: Phone (Inherits text-primary-color) --><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <a href="tel:+919986433333" class="hover:underline">+91 99864 33333</a>
                 </div>
             </div>
             
-            <!-- Right Side: Mission Statement/Motto -->
-            <div class="font-semibold tracking-wider uppercase text-xs sm:text-sm">
+            <!-- Right Side: Mission Statement/Motto (Inherits text-primary-color) --><div class="font-semibold tracking-wider uppercase text-xs sm:text-sm">
                 Building Careers with Compassion and Excellence
             </div>
         </div>
     </div>
     
-    <!-- Navigation Menu (FIXED: Logo Left, Menu Center, CTA Right) -->
-    <!-- UPDATED: bg-white changed to primary-color and shadow increased for contrast -->
-    <header class="sticky top-0 z-50 primary-color shadow-xl">
-        <!-- UPDATED: Increased horizontal padding (px-6, sm:px-8, lg:px-10) for breathing room -->
-        <nav class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex justify-between items-center">
-            <!-- 1. Logo and Text (FAR LEFT) -->
-            <a href="#home" class="flex items-center space-x-2">
-                <!-- Logo path confirmed as logo.png -->
-                <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/A51C30/ffffff?text=Logo';" alt="Saint Alphonsa School of Nursing Logo" class="h-10 w-auto rounded-md">
-                <!-- UPDATED: text-gray-800 changed to text-white -->
-                <div class="flex flex-col text-white">
+    <!-- Navigation Menu (FIXED: Logo Left, Menu Center, CTA Right) --><!-- UPDATED: Background is now Crimson (primary-color) --><header class="sticky top-0 z-50 primary-color shadow-xl">
+        <!-- UPDATED: Increased horizontal padding (px-6, sm:px-8, lg:px-10) for breathing room --><nav class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex justify-between items-center">
+            <!-- 1. Logo and Text (FAR LEFT) --><a href="#home" class="flex items-center space-x-2">
+                <!-- Logo path confirmed as logo.jpg --><!-- UPDATED: Logo placeholder color reverted to Crimson/Maroon --><img src="logo.jpg" onerror="this.onerror=null;this.src='https://placehold.co/40x40/A51C30/ffffff?text=Logo';" alt="Saint Alphonsa School of Nursing Logo" class="h-10 w-auto rounded-md">
+                <!-- Text is white --><div class="flex flex-col text-white">
                     <span class="font-bold text-lg leading-tight">Saint Alphonsa</span>
                     <span class="text-sm leading-tight -mt-1">School of Nursing</span>
                 </div>
             </a>
             
-            <!-- 2. Menu Links and Admissions CTA (FAR RIGHT GROUP) -->
-            <div class="flex items-center space-x-6">
-                <!-- Menu Links (Hidden on small screens) -->
-                <div class="hidden lg:flex space-x-6">
-                    <!-- UPDATED: Text color changed to white, hover color changed to yellow-300 for visibility -->
-                    <a href="#home" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Home</a>
+            <!-- 2. Menu Links and Admissions CTA (FAR RIGHT GROUP) --><div class="flex items-center space-x-6">
+                <!-- Menu Links (Hidden on small screens) --><div class="hidden lg:flex space-x-6">
+                    <!-- Links are white, hover yellow-300 --><a href="#home" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Home</a>
                     <a href="#chairman" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Chairman's Message</a>
                     <a href="#gnm" class="text-white hover:text-yellow-300 transition duration-200 font-medium">GNM Program</a>
                     <a href="#facilities" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Facilities</a>
@@ -108,35 +96,29 @@
                     <a href="#contact" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Contact</a>
                 </div>
 
-                <!-- 3. Primary CTA Button (Prominent Red/Maroon, separated) -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" 
+                <!-- 3. Primary CTA Button (White background/Crimson text for contrast) --><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" 
                     class="hidden md:block bg-white text-primary-color font-extrabold py-2 px-6 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 border-2 border-white">
                     ADMISSION OPEN
                 </a>
 
-                <!-- Mobile Menu Button (Hamburger) - UPDATED: Icon color changed to white, hover background changed to a darker maroon -->
-                <button id="open-menu" class="lg:hidden p-2 rounded-md text-white hover:bg-[#8D1929]">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <!-- Mobile Menu Button (Hamburger) - Text white, hover darker crimson --><button id="open-menu" class="lg:hidden p-2 rounded-md text-white hover:bg-[#8D1929]"> <!-- Darker Crimson for hover --><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </nav>
     </header>
 
-    <!-- Mobile Menu Overlay (Initially Hidden - Remains white for contrast) -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform -translate-x-full transition-transform duration-300 lg:hidden">
+    <!-- Mobile Menu Overlay (Uses White background, primary-color text) --><div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform -translate-x-full transition-transform duration-300 lg:hidden">
         <div class="p-6 h-full flex flex-col">
-            <!-- Close Button -->
-            <div class="flex justify-between items-center mb-10 pb-4 border-b border-gray-100">
+            <!-- Close Button --><div class="flex justify-between items-center mb-10 pb-4 border-b border-gray-100">
                 <div class="flex items-center space-x-2">
-                    <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/30x30/A51C30/ffffff?text=L';" alt="Logo" class="h-8 w-auto rounded-md">
+                    <!-- UPDATED: Logo placeholder color reverted to Crimson/Maroon --><img src="logo.jpg" onerror="this.onerror=null;this.src='https://placehold.co/30x30/A51C30/ffffff?text=L';" alt="Logo" class="h-8 w-auto rounded-md">
                     <h2 class="text-xl font-extrabold text-primary-color">Saint Alphonsa</h2>
                 </div>
                 <button id="close-menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
-            <!-- Menu Links -->
-            <nav class="flex flex-col space-y-4 text-xl flex-grow">
+            <!-- Menu Links --><nav class="flex flex-col space-y-4 text-xl flex-grow">
                 <a href="#home" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Home</a>
                 <a href="#chairman" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Chairman's Message</a>
                 <a href="#gnm" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">GNM Program</a>
@@ -144,24 +126,17 @@
                 <a href="#admissions" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Admissions</a>
                 <a href="#contact" class="text-gray-800 hover:text-primary-color py-3 font-medium">Contact</a>
             </nav>
-            <!-- Mobile CTA -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="mt-8 block primary-color text-white font-extrabold py-3 px-6 rounded-lg shadow-xl text-center hover:bg-[#8D1929] transition duration-300">
+            <!-- Mobile CTA --><!-- UPDATED: Reverted to Crimson/Maroon primary-color for button background and correct hover state --><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="mt-8 block primary-color text-white font-extrabold py-3 px-6 rounded-lg shadow-xl text-center hover:bg-[#8D1929] transition duration-300">
                 ADMISSION OPEN
             </a>
         </div>
     </div>
-    <!-- END Mobile Menu Overlay -->
-
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero-section h-[65vh] sm:h-[80vh] flex items-center justify-start rounded-b-xl shadow-inner">
+    <!-- END Mobile Menu Overlay --><main>
+        <!-- Hero Section --><section id="home" class="hero-section h-[65vh] sm:h-[80vh] flex items-center justify-start rounded-b-xl shadow-inner">
             
-            <!-- 1. Centered Container Element (Max-w-7xl, or ~1280px) -->
-            <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- 1. Centered Container Element (Max-w-7xl, or ~1280px) --><div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10">
 
-                <!-- 2. Content Box: Solid White background for maximum readability -->
-                <!-- UPDATED: bg-white/90 for mobile transparency, md:bg-white for desktop opacity, md:ml-8 for left offset -->
-                <div class="bg-white/90 md:bg-white p-6 sm:p-10 rounded-xl shadow-2xl max-w-lg mx-auto md:ml-8 md:mr-auto text-center md:text-left">
+                <!-- 2. Content Box: Solid White background for maximum readability --><!-- UPDATED: bg-white/90 for mobile transparency, md:bg-white for desktop opacity, md:ml-8 for left offset --><div class="bg-white/90 md:bg-white p-6 sm:p-10 rounded-xl shadow-2xl max-w-lg mx-auto md:ml-8 md:mr-auto text-center md:text-left">
                     
                     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
                         Expert Training in General Nursing & Midwifery (GNM)
@@ -170,15 +145,12 @@
                         Saint Alphonsa School of Nursing: Dedicated to academic excellence and ethical professionalism in healthcare, focused on our premier GNM program.
                     </p>
                     
-                    <!-- Button Container: Left-aligned on desktop (md:justify-start) -->
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 md:justify-start justify-center">
-                        <!-- Primary CTA: Crimson background, White text -->
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" 
+                    <!-- Button Container: Left-aligned on desktop (md:justify-start) --><div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 md:justify-start justify-center">
+                        <!-- Primary CTA: Reverted to Crimson/Maroon hex code and correct hover state --><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" 
                             class="bg-[#A51C30] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 flex items-center justify-center">
                             Apply Now &rarr;
                         </a>
-                        <!-- Secondary CTA: Now dark text on light background for contrast -->
-                        <a href="#gnm" 
+                        <!-- Secondary CTA: Hover color text/border reverted to Crimson/Maroon --><a href="#gnm" 
                             class="text-gray-700 border border-gray-400 bg-transparent font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center justify-center hover:text-[#A51C30] hover:border-[#A51C30]">
                             Explore GNM Details
                         </a>
@@ -187,15 +159,13 @@
             </div>
         </section>
 
-        <!-- Chairman’s Message Section -->
-        <section id="chairman" class="py-16 md:pt-16 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Chairman’s Message Section --><section id="chairman" class="py-16 md:pt-16 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
                 A Message from the Chairman
             </h2>
             <div class="grid md:grid-cols-3 gap-10 items-center bg-white p-8 rounded-xl shadow-lg">
                 <div class="md:col-span-1 flex flex-col items-center">
-                    <!-- Image Placeholder for Chairman -->
-                    <img src="sasn-chairman-dennis-varghese.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x400/eeeeee/333333?text=Chairman';" alt="Mr. Dennis T Varghese, Chairman" class="w-full max-w-xs h-auto rounded-xl shadow-xl object-cover border-4 border-primary-color">
+                    <!-- Image Placeholder for Chairman --><img src="sasn-chairman-dennis-varghese.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x400/eeeeee/333333?text=Chairman';" alt="Mr. Dennis T Varghese, Chairman" class="w-full max-w-xs h-auto rounded-xl shadow-xl object-cover border-4 border-primary-color">
                     <h3 class="mt-4 text-xl font-bold text-gray-900">Mr. Dennis T Varghese</h3>
                     <p class="text-primary-color font-medium">Chairman</p>
                 </div>
@@ -210,41 +180,34 @@
             </div>
         </section>
 
-        <!-- Our Values Section -->
-        <section id="values" class="py-16 md:py-24 primary-color text-white">
+        <!-- Our Values Section (Reverted to Crimson/Maroon background) --><section id="values" class="py-16 md:py-24 primary-color text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-4xl font-bold mb-4">Foundations of Professional Nursing</h2>
                 <p class="text-lg opacity-90 mb-12">
                     We prepare dynamic nursing professionals ready to lead in diverse healthcare settings worldwide, guided by three core principles.
                 </p>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Value 1: Compassionate Care -->
-                    <div class="value-card bg-white text-gray-800 p-8 rounded-xl shadow-2xl">
+                    <!-- Value 1: Compassionate Care --><div class="value-card bg-white text-gray-800 p-8 rounded-xl shadow-2xl">
                         <div class="mb-4 flex justify-center">
-                            <!-- Icon: Heart -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            <!-- Icon: Heart (Reverted to Crimson/Maroon stroke color) --><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Compassionate Care</h3>
                         <p class="text-gray-600">
                             We instill empathy and patient-centered approaches as core principles of nursing practice.
                         </p>
                     </div>
-                    <!-- Value 2: Academic Rigor -->
-                    <div class="value-card bg-white text-gray-800 p-8 rounded-xl shadow-2xl">
+                    <!-- Value 2: Academic Rigor --><div class="value-card bg-white text-gray-800 p-8 rounded-xl shadow-2xl">
                         <div class="mb-4 flex justify-center">
-                            <!-- Icon: Book/Pencil -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+                            <!-- Icon: Book/Pencil (Reverted to Crimson/Maroon stroke color) --><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Academic Rigor</h3>
                         <p class="text-gray-600">
                             Our GNM curriculum combines cutting-edge theory with extensive, supervised clinical training.
                         </p>
                     </div>
-                    <!-- Value 3: Ethical Practice -->
-                    <div class="value-card bg-white text-gray-800 p-8 rounded-xl shadow-2xl">
+                    <!-- Value 3: Ethical Practice --><div class="value-card bg-white text-gray-800 p-8 rounded-xl shadow-2xl">
                         <div class="mb-4 flex justify-center">
-                            <!-- Icon: Shield -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <!-- Icon: Shield (Reverted to Crimson/Maroon stroke color) --><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Ethical Practice</h3>
                         <p class="text-gray-600">
@@ -255,8 +218,7 @@
             </div>
         </section>
 
-        <!-- Facilities and Clinical Affiliations Section (NEW) -->
-        <section id="facilities" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Facilities and Clinical Affiliations Section (NEW) --><section id="facilities" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">
                 World-Class Facilities & Clinical Exposure
             </h2>
@@ -265,11 +227,9 @@
             </p>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Facility 1: Advanced Skills Lab -->
-                <div class="value-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-color">
+                <!-- Facility 1: Advanced Skills Lab --><div class="value-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-color">
                     <div class="flex items-center space-x-4 mb-4">
-                        <!-- Icon: Activity/Training -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <!-- Icon: Activity/Training (Reverted to Crimson/Maroon stroke color) --><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                         <h3 class="text-xl font-bold text-gray-900">High-Fidelity Skills Lab</h3>
                     </div>
                     <p class="text-gray-700">
@@ -277,11 +237,9 @@
                     </p>
                 </div>
                 
-                <!-- Facility 2: Modern Library & E-Resources -->
-                <div class="value-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-color">
+                <!-- Facility 2: Modern Library & E-Resources --><div class="value-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-color">
                     <div class="flex items-center space-x-4 mb-4">
-                        <!-- Icon: Library/Book -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 20.94c0 1.55 1.15 2.06 1.83 2.06a2.6 2.6 0 0 0 2.2-2.3c.53-2.13 2.6-3.7 4.1-3.7 1.5 0 3.2.78 3.2 2.7v.5"/><path d="M18 10a8 8 0 1 0 0 8"/><path d="M18 10c0-1.5 1.5-3 3-3"/></svg>
+                        <!-- Icon: Library/Book (Reverted to Crimson/Maroon stroke color) --><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 20.94c0 1.55 1.15 2.06 1.83 2.06a2.6 2.6 0 0 0 2.2-2.3c.53-2.13 2.6-3.7 4.1-3.7 1.5 0 3.2.78 3.2 2.7v.5"/><path d="M18 10a8 8 0 1 0 0 8"/><path d="M18 10c0-1.5 1.5-3 3-3"/></svg>
                         <h3 class="text-xl font-bold text-gray-900">Resource Library</h3>
                     </div>
                     <p class="text-gray-700">
@@ -289,11 +247,9 @@
                     </p>
                 </div>
                 
-                <!-- Facility 3: Affiliated Hospitals -->
-                <div class="value-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-color">
+                <!-- Facility 3: Affiliated Hospitals --><div class="value-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-color">
                     <div class="flex items-center space-x-4 mb-4">
-                        <!-- Icon: Hospital -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M3 15C3 12.8284 3 11.7426 3.46995 10.8732C3.9399 10.0037 4.67381 9.38379 6.14163 8.14382L7.54898 6.94639C8.38467 6.24151 9.07252 5.88907 9.54467 5.79153C10.0168 5.694 10.5186 5.82729 11.5222 6.09386L12.9295 6.45332C13.8471 6.68512 14.3059 6.80103 14.6548 7.03158C15.0038 7.26214 15.2267 7.57599 15.6725 8.20369L16.2727 9.03052C16.8904 9.87859 17.2993 10.7816 17.7029 12C17.7029 12 18 12 18 12V20H6V12C6 12 6 12 6 12Z"/><rect x="18" y="20" width="4" height="2" rx="1"/><path d="M22 20h-4"/><path d="M6 20h-4"/><path d="M9 12v-2"/></svg>
+                        <!-- Icon: Hospital (Reverted to Crimson/Maroon stroke color) --><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A51C30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M3 15C3 12.8284 3 11.7426 3.46995 10.8732C3.9399 10.0037 4.67381 9.38379 6.14163 8.14382L7.54898 6.94639C8.38467 6.24151 9.07252 5.88907 9.54467 5.79153C10.0168 5.694 10.5186 5.82729 11.5222 6.09386L12.9295 6.45332C13.8471 6.68512 14.3059 6.80103 14.6548 7.03158C15.0038 7.26214 15.2267 7.57599 15.6725 8.20369L16.2727 9.03052C16.8904 9.87859 17.2993 10.7816 17.7029 12C17.7029 12 18 12 18 12V20H6V12C6 12 6 12 6 12Z"/><rect x="18" y="20" width="4" height="2" rx="1"/><path d="M22 20h-4"/><path d="M6 20h-4"/><path d="M9 12v-2"/></svg>
                         <h3 class="text-xl font-bold text-gray-900">Major Hospital Affiliations</h3>
                     </div>
                     <p class="text-gray-700">
@@ -304,8 +260,7 @@
         </section>
 
 
-        <!-- GNM Program Details Section -->
-        <section id="gnm" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- GNM Program Details Section --><section id="gnm" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center mb-12 text-primary-color">
                 General Nursing & Midwifery (GNM)
             </h2>
@@ -354,15 +309,14 @@
                         </div>
                     </div>
                     
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="mt-8 block bg-[#A51C30] text-white font-semibold py-3 text-center rounded-lg shadow-lg hover:bg-[#8D1929] transition duration-300">
+                    <!-- UPDATED: Reverted to Crimson/Maroon hex code and correct hover state --><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="mt-8 block bg-[#A51C30] text-white font-semibold py-3 text-center rounded-lg shadow-lg hover:bg-[#8D1929] transition duration-300">
                         Secure Your Seat - Apply Now
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Admissions Call to Action Section -->
-        <section id="admissions" class="py-16 bg-gray-100">
+        <!-- Admissions Call to Action Section --><section id="admissions" class="py-16 bg-gray-100">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-xl shadow-2xl border-t-4 border-primary-color">
                 <h2 class="text-4xl font-bold mb-4 text-gray-800">
                     Ready to Start Your Nursing Career?
@@ -374,7 +328,7 @@
                     <a href="#" class="bg-yellow-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-700 transition duration-300 transform hover:scale-105 flex items-center justify-center">
                         Download Prospectus &rarr;
                     </a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="primary-color text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <!-- UPDATED: Reverted to Crimson/Maroon primary-color and correct hover state --><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="primary-color text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 flex items-center justify-center">
                         Contact Admissions Office
                     </a>
                 </div>
@@ -382,20 +336,17 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
+    <!-- Footer --><footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-10 border-b border-gray-700 pb-10">
                 
-                <!-- School Info -->
-                <div class="md:col-span-1">
+                <!-- School Info --><div class="md:col-span-1">
                     <h4 class="text-2xl font-bold mb-2 text-primary-color">Saint Alphonsa</h4>
                     <p class="text-sm text-gray-400">A commitment to health and humanity.</p>
                     <p class="mt-4 text-xs text-gray-500">Developed by Neocx Innovative Educations Private Limited</p>
                 </div>
 
-                <!-- Quick Links -->
-                <div>
+                <!-- Quick Links --><div>
                     <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#home" class="hover:text-primary-color transition duration-200">Home</a></li>
@@ -407,28 +358,23 @@
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
-                <div>
+                <!-- Contact Info --><div>
                     <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Get in Touch</h4>
                     <p class="mb-2 text-gray-400 flex items-start">
-                        <!-- Icon: Map Pin -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <!-- Icon: Map Pin --><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                         Bengaluru, Karnataka, India - 560072
                     </p>
                     <p class="mb-2 text-gray-400 flex items-center">
-                        <!-- Icon: Mail -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <!-- Icon: Mail --><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         <a href="mailto:admissions.saintalphonsa@gmail.com" class="hover:text-primary-color transition duration-200">admissions.saintalphonsa@gmail.com</a>
                     </p>
                     <p class="text-gray-400 flex items-center">
-                        <!-- Icon: Phone -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <!-- Icon: Phone --><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         <a href="tel:+919986433333" class="hover:text-primary-color transition duration-200">+91 99864 33333</a>
                     </p>
                 </div>
 
-                <!-- Map Embed -->
-                <div>
+                <!-- Map Embed --><div>
                     <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Location</h4>
                     <iframe 
                         width="100%" 
@@ -448,14 +394,10 @@
         </div>
     </footer>
 
-    <!-- NEW: Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-6 right-6 bg-primary-color text-white p-3 rounded-full shadow-lg opacity-0 invisible transition duration-300 hover:bg-[#8D1929] z-40">
+    <!-- NEW: Scroll to Top Button --><!-- UPDATED: Reverted to Crimson/Maroon primary-color and correct hover state --><button id="scroll-to-top" class="fixed bottom-6 right-6 bg-primary-color text-white p-3 rounded-full shadow-lg opacity-0 invisible transition duration-300 hover:bg-[#8D1929] z-40">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
     </button>
-    <!-- END Scroll to Top Button -->
-
-    <!-- New JavaScript for Menu Toggle and Scroll-to-Top -->
-    <script>
+    <!-- END Scroll to Top Button --><!-- New JavaScript for Menu Toggle and Scroll-to-Top --><script>
         document.addEventListener('DOMContentLoaded', () => {
             const mobileMenu = document.getElementById('mobile-menu');
             const openMenuBtn = document.getElementById('open-menu');
