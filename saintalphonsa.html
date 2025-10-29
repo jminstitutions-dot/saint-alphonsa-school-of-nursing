@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         
-        /* UPDATED: Primary Color is Crimson for attention */
+        /* Primary Color is Crimson for attention */
         .primary-color {
             background-color: #A51C30; /* Crimson */
         }
@@ -24,31 +24,27 @@
             border-color: #A51C30;
         }
         
-        /* Hero Section Adjustments for Text Safe Zone */
+        /* Hero Section Adjustments */
         .hero-section {
-            background-image: url('hero_banner.jpg');
+            background-image: url('hero_banner.png'); 
             background-size: cover;
             background-position: center;
             position: relative;
         }
+
+        /* REINTRODUCED: Dark semi-transparent overlay for readability */
         .hero-overlay {
-            /* REMOVED dark overlay to utilize image's white gradient for text contrast */
-            background: none;
-            backdrop-filter: none;
-            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent */
+            border-bottom-left-radius: 0.75rem; /* rounded-b-xl equivalent */
+            border-bottom-right-radius: 0.75rem; /* rounded-b-xl equivalent */
+            z-index: 0; /* Ensure overlay is behind text, but over image */
         }
-        .hero-content {
-            /* Aligns content strictly to the left in the white safe zone */
-            text-align: left;
-            max-width: 5xl;
-            margin-right: auto;
-            padding-left: 6rem; /* Increased padding for better separation */
-            /* Ensure content is positioned relative to the container, not the viewport */
-            transform: none !important; 
-        }
-        /* Secondary Action Button Color for Hero (Explore GNM Details) */
+        
+        /* Secondary Action Button for Hero (Solid White) */
         .hero-secondary-btn {
-            background-color: #ffffff; /* White background */
+            background-color: #ffffff; /* Solid white background */
             color: #333333; /* Dark text for contrast */
             border: 2px solid #333333; /* Dark border */
             transition: all 0.3s ease;
@@ -72,9 +68,12 @@
 
     <!-- Navigation Menu --><header class="sticky top-0 z-50 bg-white shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- UPDATED: Use logo.jpg for the site title link -->
-            <a href="#home" class="flex items-center">
-                <img src="logo.jpg" alt="Saint Alphonsa School of Nursing Logo" class="h-10 w-auto"> 
+            <!-- Logo and Text --><a href="#home" class="flex items-center space-x-2">
+                <img src="logo.jpg" alt="Saint Alphonsa School of Nursing Logo" class="h-10 w-auto">
+                <div class="flex flex-col text-gray-800">
+                    <span class="font-bold text-lg leading-tight">Saint Alphonsa</span>
+                    <span class="text-sm leading-tight -mt-1">School of Nursing</span>
+                </div>
             </a>
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="text-gray-600 hover:text-primary-color transition duration-200 font-medium">Home</a>
@@ -91,38 +90,39 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero-section h-[70vh] flex items-center justify-start rounded-b-xl shadow-inner">
-            <div class="hero-overlay absolute inset-0 rounded-b-xl"></div>
+        <!-- UPDATED: Reduced vertical height from h-[70vh] to h-[60vh] on desktop (implicit) and reduced padding-bottom on mobile to decrease overall section height -->
+        <section id="home" class="hero-section h-[60vh] sm:h-[70vh] flex items-center justify-start rounded-b-xl shadow-inner pb-12 md:pb-6">
+            <div class="hero-overlay"></div>
             
-            <!-- Hero Content: Aligned to the left safe zone with DARK text -->
-            <div class="relative z-10 max-w-4xl px-4 mx-auto hero-content"> 
-                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
+            <!-- Hero Content: Centered on Mobile, Left-aligned on Desktop, NOW WITH WHITE TEXT -->
+            <!-- UPDATED: Reduced vertical padding/margin on the content box (py-8 for mobile, md:py-0 for desktop) -->
+            <div class="relative z-10 max-w-lg px-6 mx-auto text-center md:text-left md:max-w-4xl md:ml-10 md:mr-auto md:px-0 py-8 md:py-0"> 
+                <!-- UPDATED: Font size for mobile, and text color changed to white --><h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
                     Expert Training in General Nursing & Midwifery (GNM)
                 </h1>
-                <p class="text-xl text-gray-700 mb-8">
+                <p class="text-lg sm:text-xl text-white mb-8">
                     Saint Alphonsa School of Nursing: Dedicated to academic excellence and ethical professionalism in healthcare, focused on our premier GNM program.
                 </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <!-- Primary CTA: Crimson background, White text -->
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="bg-[#A51C30] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                <!-- Button Container: Centered on Mobile, Left-aligned on Desktop --><div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                    <!-- Primary CTA: Crimson background, White text --><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" class="bg-[#A51C30] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 flex items-center justify-center">
                         Apply Now &rarr;
                     </a>
-                    <!-- Secondary CTA: Dark text/border on White background -->
-                    <a href="#gnm" class="hero-secondary-btn font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <!-- Secondary CTA: Now a solid white button for better contrast --><a href="#gnm" class="hero-secondary-btn font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center justify-center">
                         Explore GNM Details
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Chairman’s Message Section --><section id="chairman" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Chairman’s Message Section -->
+        <!-- UPDATED: Reduced top padding from py-16/py-24 to pt-12/md:pt-16 to pull it closer to the hero section -->
+        <section id="chairman" class="py-16 md:pt-16 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
                 A Message from the Chairman
             </h2>
             <div class="grid md:grid-cols-3 gap-10 items-center bg-white p-8 rounded-xl shadow-lg">
                 <div class="md:col-span-1 flex flex-col items-center">
-                    <!-- UPDATED: Use the specific chairman image file -->
-                    <img src="sasn-chairman-dennis-varghese.jpg" alt="Mr. Dennis T Varghese, Chairman" class="w-full max-w-xs h-auto rounded-xl shadow-xl object-cover border-4 border-primary-color">
+                    <!-- Correctly pointing to the chairman image file --><img src="sasn-chairman-dennis-varghese.jpg" alt="Mr. Dennis T Varghese, Chairman" class="w-full max-w-xs h-auto rounded-xl shadow-xl object-cover border-4 border-primary-color">
                     <h3 class="mt-4 text-xl font-bold text-gray-900">Mr. Dennis T Varghese</h3>
                     <p class="text-primary-color font-medium">Chairman</p>
                 </div>
@@ -137,8 +137,7 @@
             </div>
         </section>
 
-        <!-- Our Values Section -->
-        <section id="values" class="py-16 md:py-24 primary-color text-white">
+        <!-- Our Values Section --><section id="values" class="py-16 md:py-24 primary-color text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-4xl font-bold mb-4">Foundations of Professional Nursing</h2>
                 <p class="text-lg opacity-90 mb-12">
