@@ -51,7 +51,8 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- UPDATED: Top Contact Banner (Crimson Background) -->
-    <div class="primary-color text-white hidden md:block">
+    <!-- ADDED: border-b border-white for the separator line -->
+    <div class="primary-color text-white hidden md:block border-b border-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-sm">
             
             <!-- Left Side: Email and Phone Contacts -->
@@ -79,14 +80,16 @@
     </div>
     
     <!-- Navigation Menu (FIXED: Logo Left, Menu Center, CTA Right) -->
-    <header class="sticky top-0 z-50 bg-white shadow-lg">
+    <!-- UPDATED: bg-white changed to primary-color and shadow increased for contrast -->
+    <header class="sticky top-0 z-50 primary-color shadow-xl">
         <!-- UPDATED: Increased horizontal padding (px-6, sm:px-8, lg:px-10) for breathing room -->
         <nav class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex justify-between items-center">
             <!-- 1. Logo and Text (FAR LEFT) -->
             <a href="#home" class="flex items-center space-x-2">
-                <!-- Logo path confirmed as logo.jpg -->
-                <img src="logo.jpg" onerror="this.onerror=null;this.src='https://placehold.co/40x40/A51C30/ffffff?text=Logo';" alt="Saint Alphonsa School of Nursing Logo" class="h-10 w-auto rounded-md">
-                <div class="flex flex-col text-gray-800">
+                <!-- Logo path confirmed as logo.png -->
+                <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/A51C30/ffffff?text=Logo';" alt="Saint Alphonsa School of Nursing Logo" class="h-10 w-auto rounded-md">
+                <!-- UPDATED: text-gray-800 changed to text-white -->
+                <div class="flex flex-col text-white">
                     <span class="font-bold text-lg leading-tight">Saint Alphonsa</span>
                     <span class="text-sm leading-tight -mt-1">School of Nursing</span>
                 </div>
@@ -96,35 +99,36 @@
             <div class="flex items-center space-x-6">
                 <!-- Menu Links (Hidden on small screens) -->
                 <div class="hidden lg:flex space-x-6">
-                    <a href="#home" class="text-gray-600 hover:text-primary-color transition duration-200 font-medium">Home</a>
-                    <a href="#chairman" class="text-gray-600 hover:text-primary-color transition duration-200 font-medium">Chairman's Message</a>
-                    <a href="#gnm" class="text-gray-600 hover:text-primary-color transition duration-200 font-medium">GNM Program</a>
-                    <a href="#facilities" class="text-gray-600 hover:text-primary-color transition duration-200 font-medium">Facilities</a>
-                    <a href="#admissions" class="text-gray-600 hover:text-primary-color transition duration-200 font-medium">Admissions</a>
-                    <a href="#contact" class="text-gray-600 hover:text-primary-color transition duration-200 font-medium">Contact</a>
+                    <!-- UPDATED: Text color changed to white, hover color changed to yellow-300 for visibility -->
+                    <a href="#home" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Home</a>
+                    <a href="#chairman" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Chairman's Message</a>
+                    <a href="#gnm" class="text-white hover:text-yellow-300 transition duration-200 font-medium">GNM Program</a>
+                    <a href="#facilities" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Facilities</a>
+                    <a href="#admissions" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Admissions</a>
+                    <a href="#contact" class="text-white hover:text-yellow-300 transition duration-200 font-medium">Contact</a>
                 </div>
 
                 <!-- 3. Primary CTA Button (Prominent Red/Maroon, separated) -->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank" 
-                    class="hidden md:block primary-color text-white font-extrabold py-2 px-6 rounded-lg shadow-xl hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 border-2 border-white">
+                    class="hidden md:block bg-white text-primary-color font-extrabold py-2 px-6 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 border-2 border-white">
                     ADMISSION OPEN
                 </a>
 
-                <!-- Mobile Menu Button (Hamburger) - ADDED ID -->
-                <button id="open-menu" class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                <!-- Mobile Menu Button (Hamburger) - UPDATED: Icon color changed to white, hover background changed to a darker maroon -->
+                <button id="open-menu" class="lg:hidden p-2 rounded-md text-white hover:bg-[#8D1929]">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </nav>
     </header>
 
-    <!-- NEW: Mobile Menu Overlay (Initially Hidden) -->
+    <!-- Mobile Menu Overlay (Initially Hidden - Remains white for contrast) -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform -translate-x-full transition-transform duration-300 lg:hidden">
         <div class="p-6 h-full flex flex-col">
             <!-- Close Button -->
             <div class="flex justify-between items-center mb-10 pb-4 border-b border-gray-100">
                 <div class="flex items-center space-x-2">
-                    <img src="logo.jpg" onerror="this.onerror=null;this.src='https://placehold.co/30x30/A51C30/ffffff?text=L';" alt="Logo" class="h-8 w-auto rounded-md">
+                    <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/30x30/A51C30/ffffff?text=L';" alt="Logo" class="h-8 w-auto rounded-md">
                     <h2 class="text-xl font-extrabold text-primary-color">Saint Alphonsa</h2>
                 </div>
                 <button id="close-menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
