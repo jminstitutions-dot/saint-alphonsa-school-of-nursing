@@ -36,269 +36,306 @@
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
         }
+        /* Optional: prevent anchor links from being hidden behind sticky header */
+        section[id] {
+            scroll-margin-top: 70px;
+        }
+        @media (min-width: 768px) {
+            section[id] {
+                scroll-margin-top: 80px;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Top Contact Banner -->
-    <div class="bg-white text-primary-color hidden md:block border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-sm">
-            <div class="flex items-center space-x-6">
-                <div class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 7-8.97 12.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <a href="mailto:admissions.saintalphonsa@gmail.com" class="hover:underline">admissions.saintalphonsa@gmail.com</a>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <a href="tel:+919986433333" class="hover:underline">+91 99864 33333</a>
-                </div>
+<!-- Top Contact Banner -->
+<div class="bg-white text-primary-color hidden md:block border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-sm">
+        <div class="flex items-center space-x-6">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 7-8.97 12.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <a href="mailto:admissions.saintalphonsa@gmail.com" class="hover:underline">admissions.saintalphonsa@gmail.com</a>
             </div>
-            <div class="font-semibold tracking-wider uppercase text-xs sm:text-sm">
-                Building Careers with Compassion and Excellence
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+919986433333" class="hover:underline">+91 99864 33333</a>
             </div>
         </div>
+        <div class="font-semibold tracking-wider uppercase text-xs sm:text-sm">
+            Building Careers with Compassion and Excellence
+        </div>
     </div>
+</div>
 
-    <!-- FIXED: Navigation with reserved logo space and right-aligned menu -->
-    <header class="sticky top-0 z-50 primary-color shadow-xl">
-        <nav class="max-w-10xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex items-center">
-            <!-- Reserve space for logo + text -->
-            <div class="flex-shrink-0 w-64">
-                <a href="#home" class="flex items-center space-x-2">
-                    <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/A51C30/ffffff?text=Logo';" alt="Saint Alphonsa School of Nursing Logo" class="h-10 w-auto rounded-md">
-                    <div class="flex flex-col text-white">
-                        <span class="font-bold text-lg leading-tight">Saint Alphonsa</span>
-                        <span class="text-sm leading-tight -mt-1">School of Nursing</span>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Menu pushed to the right -->
-            <div class="flex items-center space-x-6 ml-auto">
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex space-x-3">
-                    <a href="#home" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Home</a>
-                    <a href="#chairman" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Chairman's Message</a>
-                    <a href="#gnm" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">GNM Program</a>
-                    <a href="#facilities" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Facilities</a>
-                    <a href="#admissions" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Admissions</a>
-                    <a href="admission-partner-nepal.html" class="hidden xl:inline-block text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Admission Partner (Nepal)</a>
-                    <a href="hospital-tieups.html" class="hidden xl:inline-block text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Hospital Tie-ups</a>
-                    <a href="internship-placements.html" class="hidden xl:inline-block text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Internship & Placements</a>
-                    <a href="testimonials.html" class="hidden xl:inline-block text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Testimonials</a>
-                    <a href="reviews.html" class="hidden xl:inline-block text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Reviews</a>
-                    <a href="#contact" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Contact</a>
+<!-- Navigation -->
+<header class="sticky top-0 z-50 primary-color shadow-xl">
+    <nav class="max-w-10xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex items-center">
+        <div class="flex-shrink-0 w-64">
+            <a href="#home" class="flex items-center space-x-2">
+                <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/A51C30/ffffff?text=Logo';" alt="Logo" class="h-10 w-auto rounded-md">
+                <div class="flex flex-col text-white">
+                    <span class="font-bold text-lg leading-tight">Saint Alphonsa</span>
+                    <span class="text-sm leading-tight -mt-1">School of Nursing</span>
                 </div>
-
-                <!-- CTA -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank"
-                    class="hidden md:block bg-white text-primary-color font-extrabold py-2 px-6 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 border-2 border-white">
-                    ADMISSION OPEN
-                </a>
-
-                <!-- Mobile Button -->
-                <button id="open-menu" class="lg:hidden p-2 rounded-md text-white hover:bg-[#8D1929]">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform -translate-x-full transition-transform duration-300 lg:hidden">
-        <div class="p-6 h-full flex flex-col">
-            <div class="flex justify-between items-center mb-10 pb-4 border-b border-gray-100">
-                <div class="flex items-center space-x-2">
-                    <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/30x30/A51C30/ffffff?text=L';" alt="Logo" class="h-8 w-auto rounded-md">
-                    <h2 class="text-xl font-extrabold text-primary-color">Saint Alphonsa</h2>
-                </div>
-                <button id="close-menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav class="flex flex-col space-y-4 text-xl flex-grow">
-                <a href="#home" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Home</a>
-                <a href="#chairman" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Chairman's Message</a>
-                <a href="#gnm" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">GNM Program</a>
-                <a href="#facilities" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Facilities</a>
-                <a href="#admissions" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Admissions</a>
-                <a href="admission-partner-nepal.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Admission Partner (Nepal)</a>
-                <a href="hospital-tieups.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Hospital Tie-ups</a>
-                <a href="internship-placements.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Internship & Placements</a>
-                <a href="testimonials.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Testimonials</a>
-                <a href="reviews.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Reviews</a>
-                <a href="#contact" class="text-gray-800 hover:text-primary-color py-3 font-medium">Contact</a>
-            </nav>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank"
-                class="mt-8 block primary-color text-white font-extrabold py-3 px-6 rounded-lg shadow-xl text-center hover:bg-[#8D1929] transition duration-300">
-                ADMISSION OPEN
             </a>
         </div>
+        <div class="flex items-center space-x-6 ml-auto">
+            <div class="hidden lg:flex space-x-3">
+                <a href="#home" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Home</a>
+                <a href="#chairman" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Chairman's Message</a>
+                <a href="#gnm" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">GNM Program</a>
+                <a href="#facilities" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Facilities</a>
+                <a href="#admissions" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Admissions</a>
+                <a href="admission-partner-nepal.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Admission Partner (Nepal)</a>
+                <a href="hospital-tieups.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Hospital Tie-ups</a>
+                <a href="internship-placements.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Internship & Placements</a>
+                <a href="testimonials.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Testimonials</a>
+                <a href="#contact" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Contact</a>
+            </div>
+            <a href="https://docs.google.com/forms/d/1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/preview" target="_blank"
+                class="hidden md:block bg-white text-primary-color font-extrabold py-2 px-6 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 border-2 border-white">
+                ADMISSION OPEN
+            </a>
+            <button id="open-menu" class="lg:hidden p-2 rounded-md text-white hover:bg-[#8D1929]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform -translate-x-full transition-transform duration-300 lg:hidden">
+    <div class="p-6 h-full flex flex-col">
+        <div class="flex justify-between items-center mb-10 pb-4 border-b border-gray-100">
+            <div class="flex items-center space-x-2">
+                <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/30x30/A51C30/ffffff?text=L';" alt="Logo" class="h-8 w-auto rounded-md">
+                <h2 class="text-xl font-extrabold text-primary-color">Saint Alphonsa</h2>
+            </div>
+            <button id="close-menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4 text-xl flex-grow">
+            <a href="#home" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Home</a>
+            <a href="#chairman" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Chairman's Message</a>
+            <a href="#gnm" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">GNM Program</a>
+            <a href="#facilities" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Facilities</a>
+            <a href="#admissions" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Admissions</a>
+            <a href="admission-partner-nepal.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Admission Partner (Nepal)</a>
+            <a href="hospital-tieups.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Hospital Tie-ups</a>
+            <a href="internship-placements.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Internship & Placements</a>
+            <a href="testimonials.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Testimonials</a>
+            <a href="#contact" class="text-gray-800 hover:text-primary-color py-3 font-medium">Contact</a>
+        </nav>
+        <a href="https://docs.google.com/forms/d/1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/preview" target="_blank"
+            class="mt-8 block primary-color text-white font-extrabold py-3 px-6 rounded-lg shadow-xl text-center hover:bg-[#8D1929] transition duration-300">
+            ADMISSION OPEN
+        </a>
     </div>
+</div>
 
-    <main>
-        <!-- Hero Section: FIXED with top padding -->
-        <section id="home" class="hero-section h-[65vh] sm:h-[80vh] flex items-start justify-start rounded-b-xl shadow-inner">
-            <div class="max-w-10xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 md:pt-36 relative z-10">
-                <div class="bg-white/90 md:bg-white p-6 sm:p-10 rounded-xl shadow-2xl max-w-lg mx-auto md:ml-8 md:mr-auto text-center md:text-left">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-                        Expert Training in General Nursing & Midwifery (GNM)
-                    </h1>
-                    <p class="text-base sm:text-lg text-gray-700 mb-8">
-                        Saint Alphonsa School of Nursing: Dedicated to academic excellence and ethical professionalism in healthcare, focused on our premier GNM program.
-                    </p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 md:justify-start justify-center">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJZJUu39mstsxZvfyVTsy_4XPz0H6QeOSeyGMy-HfhRNZlag/viewform?usp=preview" target="_blank"
-                            class="bg-[#A51C30] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 flex items-center justify-center">
-                            Apply Now &rarr;
-                        </a>
-                        <a href="#gnm"
-                            class="text-gray-700 border border-gray-400 bg-transparent font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center justify-center hover:text-[#A51C30] hover:border-[#A51C30]">
-                            Explore GNM Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Remaining sections unchanged (Chairman, Values, Facilities, etc.) -->
-        <!-- For brevity, they’re omitted here — keep your existing sections as-is -->
-        <!-- You can paste them below this comment -->
-
-        <!-- Chairman’s Message Section -->
-        <section id="chairman" class="py-16 md:pt-16 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
-                A Message from the Chairman
-            </h2>
-            <div class="grid md:grid-cols-3 gap-10 items-center bg-white p-8 rounded-xl shadow-lg">
-                <div class="md:col-span-1 flex flex-col items-center">
-                    <img src="sasn-chairman-dennis-varghese.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x400/eeeeee/333333?text=Chairman';" alt="Mr. Dennis T Varghese, Chairman" class="w-full max-w-xs h-auto rounded-xl shadow-xl object-cover border-4 border-primary-color">
-                    <h3 class="mt-4 text-xl font-bold text-gray-900">Mr. Dennis T Varghese</h3>
-                    <p class="text-primary-color font-medium">Chairman</p>
-                </div>
-                <div class="md:col-span-2 text-lg leading-relaxed text-gray-700 border-l-4 border-primary-color pl-6">
-                    <p class="italic mb-4">
-                        "Our commitment at Saint Alphonsa School of Nursing is clear: to cultivate nurses who are not only clinically proficient but are also defined by their deep sense of compassion and ethical duty. The healthcare landscape is constantly evolving, and through our dedicated GNM program, we ensure every student is equipped with the foundational knowledge and resilience required to excel in this noble profession. We invite you to join us in building a future where quality healthcare meets true humanity."
-                    </p>
-                    <p class="font-semibold text-right mt-6 text-primary-color">
-                        — Mr. Dennis T Varghese
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rest of your sections go here... -->
-
-    </main>
-
-    <!-- Footer (unchanged) -->
-    <footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-10 border-b border-gray-700 pb-10">
-                <div class="md:col-span-1">
-                    <h4 class="text-2xl font-bold mb-2 text-primary-color">Saint Alphonsa</h4>
-                    <p class="text-sm text-gray-400">A commitment to health and humanity.</p>
-                    <p class="mt-4 text-xs text-gray-500">Developed by Neocx Innovative Educations Private Limited</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#home" class="hover:text-primary-color transition duration-200">Home</a></li>
-                        <li><a href="#chairman" class="hover:text-primary-color transition duration-200">Chairman's Message</a></li>
-                        <li><a href="#gnm" class="hover:text-primary-color transition duration-200">GNM Program Details</a></li>
-                        <li><a href="#facilities" class="hover:text-primary-color transition duration-200">Our Facilities</a></li>
-                        <li><a href="#admissions" class="hover:text-primary-color transition duration-200">Admissions</a></li>
-                        <li><a href="#contact" class="hover:text-primary-color transition duration-200">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Get in Touch</h4>
-                    <p class="mb-2 text-gray-400 flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                        Bengaluru, Karnataka, India - 560072
-                    </p>
-                    <p class="mb-2 text-gray-400 flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                        <a href="mailto:admissions.saintalphonsa@gmail.com" class="hover:text-primary-color transition duration-200">admissions.saintalphonsa@gmail.com</a>
-                    </p>
-                    <p class="text-gray-400 flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <a href="tel:+919986433333" class="hover:text-primary-color transition duration-200">+91 99864 33333</a>
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Location</h4>
-                    <iframe 
-                        width="100%" 
-                        height="200" 
-                        frameborder="0" 
-                        style="border:0; border-radius: 0.5rem;" 
-                        src="https://maps.google.com/maps?q=12.9601044,77.5114192&z=15&output=embed" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div>
-            </div>
-            <div class="mt-8 text-center text-gray-500 text-sm">
-                © 2024 Saint Alphonsa School of Nursing. All rights reserved.
+<main>
+<!-- Hero Section -->
+<section id="home" class="hero-section h-[65vh] sm:h-[80vh] flex justify-center rounded-b-xl shadow-inner">
+    <div class="max-w-10xl mx-auto w-full px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center md:justify-start relative z-10 pt-12 md:pt-0">
+        <div class="bg-white/90 md:bg-white p-6 sm:p-10 rounded-xl shadow-2xl max-w-lg mx-auto md:ml-8 md:mr-auto text-center md:text-left">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Expert Training in General Nursing & Midwifery (GNM)
+            </h1>
+            <p class="text-base sm:text-lg text-gray-700 mb-8">
+                Saint Alphonsa School of Nursing: Dedicated to academic excellence and ethical professionalism in healthcare, focused on our premier GNM program.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 md:justify-start justify-center">
+                <a href="https://docs.google.com/forms/d/1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/preview" target="_blank"
+                    class="bg-[#A51C30] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                    Apply Now &rarr;
+                </a>
+                <a href="#gnm"
+                    class="text-gray-700 border border-gray-400 bg-transparent font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center justify-center hover:text-[#A51C30] hover:border-[#A51C30]">
+                    Explore GNM Details
+                </a>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- Scroll to Top + JS (unchanged) -->
-    <button id="scroll-to-top" class="fixed bottom-6 right-6 bg-primary-color text-white p-3 rounded-full shadow-lg opacity-0 invisible transition duration-300 hover:bg-[#8D1929] z-40">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
-    </button>
+<!-- Chairman -->
+<section id="chairman" class="py-16 md:pt-16 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+        A Message from the Chairman
+    </h2>
+    <div class="grid md:grid-cols-3 gap-10 items-center bg-white p-8 rounded-xl shadow-lg">
+        <div class="md:col-span-1 flex flex-col items-center">
+            <img src="sasn-chairman-dennis-varghese.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x400/eeeeee/333333?text=Chairman';" alt="Mr. Dennis T Varghese, Chairman" class="w-full max-w-xs h-auto rounded-xl shadow-xl object-cover border-4 border-primary-color">
+            <h3 class="mt-4 text-xl font-bold text-gray-900">Mr. Dennis T Varghese</h3>
+            <p class="text-primary-color font-medium">Chairman</p>
+        </div>
+        <div class="md:col-span-2 text-lg leading-relaxed text-gray-700 border-l-4 border-primary-color pl-6">
+            <p class="italic mb-4">
+                "Our commitment at Saint Alphonsa School of Nursing is clear: to cultivate nurses who are not only clinically proficient but are also defined by their deep sense of compassion and ethical duty. The healthcare landscape is constantly evolving, and through our dedicated GNM program, we ensure every student is equipped with the foundational knowledge and resilience required to excel in this noble profession. We invite you to join us in building a future where quality healthcare meets true humanity."
+            </p>
+            <p class="font-semibold text-right mt-6 text-primary-color">
+                — Mr. Dennis T Varghese
+            </p>
+        </div>
+    </div>
+</section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const openMenuBtn = document.getElementById('open-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            const scrollToTopBtn = document.getElementById('scroll-to-top');
+<!-- GNM Program -->
+<section id="gnm" class="py-16 bg-gray-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">General Nursing & Midwifery (GNM) Program</h2>
+    <div class="grid md:grid-cols-2 gap-8 text-gray-700">
+        <p>The GNM program is designed to provide students with comprehensive clinical training, practical experience, and academic knowledge necessary to become competent nurses. The curriculum includes subjects like anatomy, physiology, pharmacology, midwifery, community health, and nursing ethics. Graduates are prepared to work in hospitals, clinics, and community health centers, serving diverse populations with compassion and skill.</p>
+        <ul class="list-disc pl-5 space-y-2">
+            <li>Comprehensive clinical and academic training</li>
+            <li>Hands-on practical experience in healthcare settings</li>
+            <li>Focus on ethical and professional development</li>
+            <li>Opportunities for career growth and specializations</li>
+        </ul>
+    </div>
+</section>
 
-            const toggleMenu = () => {
-                if (mobileMenu.classList.contains('-translate-x-full')) {
-                    mobileMenu.classList.remove('-translate-x-full');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    mobileMenu.classList.add('-translate-x-full');
-                    document.body.style.overflow = '';
-                }
-            };
+<!-- Facilities -->
+<section id="facilities" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Facilities</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-gray-700">
+        <div class="p-6 bg-white rounded-xl shadow-lg text-center">
+            <h3 class="text-xl font-bold mb-2">Modern Laboratories</h3>
+            <p>State-of-the-art labs for practical nursing training.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg text-center">
+            <h3 class="text-xl font-bold mb-2">Library & Study Centers</h3>
+            <p>Well-stocked library with latest medical and nursing resources.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg text-center">
+            <h3 class="text-xl font-bold mb-2">Hostel & Cafeteria</h3>
+            <p>Safe and comfortable accommodations for students.</p>
+        </div>
+    </div>
+</section>
 
-            if (openMenuBtn) openMenuBtn.addEventListener('click', toggleMenu);
-            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+<!-- Admissions -->
+<section id="admissions" class="py-16 bg-gray-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Admissions</h2>
+    <div class="max-w-3xl mx-auto text-gray-700 space-y-6 text-center">
+        <p>For admission-related information, please contact:</p>
+        <p><strong>Phone:</strong> <a href="tel:+919986433333" class="text-primary-color">+91 99864 33333</a></p>
+        <p><strong>Email:</strong> <a href="mailto:admissions.saintalphonsa@gmail.com" class="text-primary-color">admissions.saintalphonsa@gmail.com</a></p>
+        <p>Alternatively, fill out our <a href="https://docs.google.com/forms/d/1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/preview" target="_blank" class="text-primary-color font-semibold underline">callback form</a>.</p>
+    </div>
+</section>
 
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('-translate-x-full')) {
-                        mobileMenu.classList.add('-translate-x-full');
-                        document.body.style.overflow = '';
-                    }
-                });
-            });
+</main>
 
-            window.onscroll = function() {
-                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                    scrollToTopBtn.classList.remove('opacity-0', 'invisible');
-                    scrollToTopBtn.classList.add('opacity-100', 'visible');
-                } else {
-                    scrollToTopBtn.classList.remove('opacity-100', 'visible');
-                    scrollToTopBtn.classList.add('opacity-0', 'invisible');
-                }
-            };
+<!-- Footer -->
+<footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 border-b border-gray-700 pb-10">
+            <div class="md:col-span-1">
+                <h4 class="text-2xl font-bold mb-2 text-primary-color">Saint Alphonsa</h4>
+                <p class="text-sm text-gray-400">A commitment to health and humanity.</p>
+                <p class="mt-4 text-xs text-gray-500">Developed by Neocx Innovative Educations Private Limited</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#home" class="hover:text-primary-color transition duration-200">Home</a></li>
+                    <li><a href="#chairman" class="hover:text-primary-color transition duration-200">Chairman's Message</a></li>
+                    <li><a href="#gnm" class="hover:text-primary-color transition duration-200">GNM Program Details</a></li>
+                    <li><a href="#facilities" class="hover:text-primary-color transition duration-200">Our Facilities</a></li>
+                    <li><a href="#admissions" class="hover:text-primary-color transition duration-200">Admissions</a></li>
+                    <li><a href="#contact" class="hover:text-primary-color transition duration-200">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Get in Touch</h4>
+                <p class="mb-2 text-gray-400 flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Bengaluru, Karnataka, India - 560072
+                </p>
+                <p class="mb-2 text-gray-400 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <a href="mailto:admissions.saintalphonsa@gmail.com" class="hover:text-primary-color transition duration-200">admissions.saintalphonsa@gmail.com</a>
+                </p>
+                <p class="text-gray-400 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:+919986433333" class="hover:text-primary-color transition duration-200">+91 99864 33333</a>
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Location</h4>
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    frameborder="0" 
+                    style="border:0; border-radius: 0.5rem;" 
+                    src="https://maps.google.com/maps?q=12.9601044,77.5114192&z=15&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            © 2024 Saint Alphonsa School of Nursing. All rights reserved.
+        </div>
+    </div>
+</footer>
 
-            scrollToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+<!-- Scroll to Top + JS -->
+<button id="scroll-to-top" class="fixed bottom-6 right-6 bg-primary-color text-white p-3 rounded-full shadow-lg opacity-0 invisible transition duration-300 hover:bg-[#8D1929] z-40">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openMenuBtn = document.getElementById('open-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    const toggleMenu = () => {
+        if (mobileMenu.classList.contains('-translate-x-full')) {
+            mobileMenu.classList.remove('-translate-x-full');
+            document.body.style.overflow = 'hidden';
+        } else {
+            mobileMenu.classList.add('-translate-x-full');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (openMenuBtn) openMenuBtn.addEventListener('click', toggleMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('-translate-x-full')) {
+                mobileMenu.classList.add('-translate-x-full');
+                document.body.style.overflow = '';
+            }
         });
-    </script>
+    });
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+            scrollToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+            scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            scrollToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+    };
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+</script>
+
 </body>
 </html>
-
