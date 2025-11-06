@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +27,24 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        section[id] {
+            scroll-margin-top: 70px;
+        }
+        @media (min-width: 768px) {
+            section[id] {
+                scroll-margin-top: 80px;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
 <!-- Top Contact Banner -->
 <div class="bg-white text-primary-color hidden md:block border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-sm">
+    <div class="w-full px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-sm">
         <div class="flex items-center space-x-6">
             <div class="flex items-center space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
@@ -57,8 +67,8 @@
 
 <!-- Navigation -->
 <header class="sticky top-0 z-50 primary-color shadow-xl">
-    <nav class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex items-center">
-        <div class="flex-shrink-0">
+    <nav class="w-full px-6 sm:px-8 lg:px-10 py-4 flex items-center">
+        <div class="flex-shrink-0 w-64">
             <a href="index.html" class="flex items-center space-x-2">
                 <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/A51C30/ffffff?text=Logo';" alt="Logo" class="h-10 w-auto rounded-md">
                 <div class="flex flex-col text-white">
@@ -67,173 +77,324 @@
                 </div>
             </a>
         </div>
-        <div class="ml-auto">
-            <a href="index.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium">← Back to Home</a>
+        <div class="flex items-center space-x-6 ml-auto">
+            <div class="hidden lg:flex space-x-3">
+                <a href="index.html#home" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Home</a>
+                <a href="index.html#chairman" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Chairman's Message</a>
+                <a href="index.html#gnm" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">GNM Program</a>
+                <a href="index.html#facilities" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Facilities</a>
+                <a href="index.html#admissions" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Admissions</a>
+                <a href="admission-partner-nepal.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Admission Partner (Nepal)</a>
+                <a href="hospital-tieups.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Hospital Tie-ups</a>
+                <a href="internship-placements.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Internship & Placements</a>
+                <a href="testimonials.html" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Testimonials</a>
+                <a href="index.html#contact" class="text-white text-sm hover:text-yellow-300 transition duration-200 font-medium whitespace-nowrap">Contact</a>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/viewform" target="_blank" rel="noopener noreferrer"
+                class="hidden md:block bg-white text-primary-color font-extrabold py-2 px-6 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 border-2 border-white">
+                ADMISSION OPEN
+            </a>
+            <button id="open-menu" class="lg:hidden p-2 rounded-md text-white hover:bg-[#8D1929]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
     </nav>
 </header>
 
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h1 class="text-4xl font-extrabold text-center mb-12 text-gray-900">Hospital Tie-ups</h1>
-
-    <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-16">
-        Saint Alphonsa School of Nursing has established strategic clinical partnerships with leading healthcare institutions across Bengaluru to ensure our students receive high-quality, real-world training.
-    </p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        <!-- Brains Super Speciality Hospital -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="brains-hospital.webp"
-                alt="Brains Super Speciality Hospital"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Brains+Hospital';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">Brains Super Speciality Hospital</h3>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform -translate-x-full transition-transform duration-300 lg:hidden">
+    <div class="p-6 h-full flex flex-col">
+        <div class="flex justify-between items-center mb-10 pb-4 border-b border-gray-100">
+            <div class="flex items-center space-x-2">
+                <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/30x30/A51C30/ffffff?text=L';" alt="Logo" class="h-8 w-auto rounded-md">
+                <h2 class="text-xl font-extrabold text-primary-color">Saint Alphonsa</h2>
             </div>
+            <button id="close-menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
-
-        <!-- Fortis Hospital Nagarbhavi -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="fortis-nagarbhavi.webp"
-                alt="Fortis Hospital Nagarbhavi"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Fortis+Nagarbhavi';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">Fortis Hospital Nagarbhavi</h3>
-            </div>
-        </div>
-
-        <!-- Indira Gandhi Institute of Child Health -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="indira-gandhi-child-health.jpg"
-                alt="Indira Gandhi Institute of Child Health"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=IGICH';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">Indira Gandhi Institute of Child Health</h3>
-            </div>
-        </div>
-
-        <!-- K. Narayanapura PHC -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="k-narayanapura-phc.webp"
-                alt="K. Narayanapura Primary Health Centre (PHC)"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Narayanapura+PHC';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">K. Narayanapura PHC</h3>
-            </div>
-        </div>
-
-        <!-- K.C. General Hospital -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="kc-general-hospital.avif"
-                alt="K.C. General Hospital"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=KC+General';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">K.C. General Hospital</h3>
-            </div>
-        </div>
-
-        <!-- Manjunatha Nethralaya Eye Hospital -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="manjunatha-nethralaya.avif"
-                alt="Manjunatha Nethralaya Eye Hospital"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Manjunatha+Nethralaya';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">Manjunatha Nethralaya</h3>
-            </div>
-        </div>
-
-        <!-- OncoVille Cancer Hospital & Research Center -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="oncoville-cancer.webp"
-                alt="OncoVille Cancer Hospital & Research Center"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=OncoVille+Cancer';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">OncoVille Cancer Hospital</h3>
-            </div>
-        </div>
-
-        <!-- Vani Vilas Hospital -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="vanivilas-hospital.jpg"
-                alt="Vani Vilas Hospital"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Vani+Vilas';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">Vani Vilas Hospital</h3>
-            </div>
-        </div>
-
-        <!-- Varalakshmi Hospital -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="varalakshmi-hospital.avif"
-                alt="Varalakshmi Hospital"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Varalakshmi+Hospital';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">Varalakshmi Hospital</h3>
-            </div>
-        </div>
-
-        <!-- Victoria Hospital -->
-        <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <img
-                src="victoria-hospital.jpg"
-                alt="Victoria Hospital"
-                class="w-full h-48 object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Victoria+Hospital';"
-            />
-            <div class="p-4 text-center">
-                <h3 class="font-bold text-lg text-gray-900">Victoria Hospital</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="mt-16 text-center">
-        <a
-            href="https://docs.google.com/forms/d/1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/preview"
-            target="_blank"
-            class="inline-block bg-primary-color text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300"
-        >
-            Apply for GNM Program
+        <nav class="flex flex-col space-y-4 text-xl flex-grow">
+            <a href="index.html#home" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Home</a>
+            <a href="index.html#chairman" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Chairman's Message</a>
+            <a href="index.html#gnm" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">GNM Program</a>
+            <a href="index.html#facilities" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Facilities</a>
+            <a href="index.html#admissions" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Admissions</a>
+            <a href="admission-partner-nepal.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Admission Partner (Nepal)</a>
+            <a href="hospital-tieups.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Hospital Tie-ups</a>
+            <a href="internship-placements.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Internship & Placements</a>
+            <a href="testimonials.html" class="text-gray-800 hover:text-primary-color py-3 border-b border-gray-100 font-medium">Testimonials</a>
+            <a href="index.html#contact" class="text-gray-800 hover:text-primary-color py-3 font-medium">Contact</a>
+        </nav>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/viewform" target="_blank" rel="noopener noreferrer"
+            class="mt-8 block primary-color text-white font-extrabold py-3 px-6 rounded-lg shadow-xl text-center hover:bg-[#8D1929] transition duration-300">
+            ADMISSION OPEN
         </a>
     </div>
+</div>
+
+<main>
+    <!-- Hospital Tie-ups Content -->
+    <section class="w-full px-4 sm:px-6 lg:px-8 py-16">
+        <h1 class="text-4xl font-extrabold text-center mb-12 text-gray-900">Hospital Tie-ups</h1>
+
+        <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-16">
+            Saint Alphonsa School of Nursing has established strategic clinical partnerships with leading healthcare institutions across Bengaluru to ensure our students receive high-quality, real-world training.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <!-- Brains Super Speciality Hospital -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Brain_and_Spine_Super_Speciality_Hospital.jpg/400px-Brain_and_Spine_Super_Speciality_Hospital.jpg"
+                    alt="Brains Super Speciality Hospital"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Brains+Hospital';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">Brains Super Speciality Hospital</h3>
+                </div>
+            </div>
+
+            <!-- Fortis Hospital Nagarbhavi -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://www.fortishealthcare.com/sites/default/files/styles/featured_image/public/2021-11/Fortis-Hospital-Nagarbhavi.jpg"
+                    alt="Fortis Hospital Nagarbhavi"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Fortis+Nagarbhavi';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">Fortis Hospital Nagarbhavi</h3>
+                </div>
+            </div>
+
+            <!-- Indira Gandhi Institute of Child Health -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://igich.karnataka.gov.in/storage/static_content/images/1678464461118.jpg"
+                    alt="Indira Gandhi Institute of Child Health"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=IGICH';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">Indira Gandhi Institute of Child Health</h3>
+                </div>
+            </div>
+
+            <!-- K. Narayanapura PHC -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://placehold.co/400x200/e0e0e0/666666?text=Narayanapura+PHC"
+                    alt="K. Narayanapura Primary Health Centre (PHC)"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Narayanapura+PHC';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">K. Narayanapura PHC</h3>
+                </div>
+            </div>
+
+            <!-- K.C. General Hospital -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/KC_General_Hospital.jpg/400px-KC_General_Hospital.jpg"
+                    alt="K.C. General Hospital"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=KC+General';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">K.C. General Hospital</h3>
+                </div>
+            </div>
+
+            <!-- Manjunatha Nethralaya Eye Hospital -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://placehold.co/400x200/e0e0e0/666666?text=Manjunatha+Nethralaya"
+                    alt="Manjunatha Nethralaya Eye Hospital"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Manjunatha+Nethralaya';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">Manjunatha Nethralaya</h3>
+                </div>
+            </div>
+
+            <!-- OncoVille Cancer Hospital & Research Center -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://oncoville.in/wp-content/uploads/2021/04/OncoVille-Cancer-Hospital-Bangalore.jpg"
+                    alt="OncoVille Cancer Hospital & Research Center"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=OncoVille+Cancer';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">OncoVille Cancer Hospital</h3>
+                </div>
+            </div>
+
+            <!-- Vani Vilas Hospital -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Vani_Vilas_Hospital_%28Bangalore%29.jpg/400px-Vani_Vilas_Hospital_%28Bangalore%29.jpg"
+                    alt="Vani Vilas Hospital"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Vani+Vilas';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">Vani Vilas Hospital</h3>
+                </div>
+            </div>
+
+            <!-- Varalakshmi Hospital -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://placehold.co/400x200/e0e0e0/666666?text=Varalakshmi+Hospital"
+                    alt="Varalakshmi Hospital"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Varalakshmi+Hospital';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">Varalakshmi Hospital</h3>
+                </div>
+            </div>
+
+            <!-- Victoria Hospital -->
+            <div class="hospital-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Victoria_Hospital_Bangalore.jpg/400px-Victoria_Hospital_Bangalore.jpg"
+                    alt="Victoria Hospital"
+                    class="w-full h-48 object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x200/eeeeee/333333?text=Victoria+Hospital';"
+                />
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-lg text-gray-900">Victoria Hospital</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center max-w-4xl mx-auto">
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block bg-primary-color text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#8D1929] transition duration-300"
+            >
+                Apply for GNM Program
+            </a>
+        </div>
+    </section>
 </main>
 
 <!-- Footer -->
-<footer class="bg-gray-800 text-white pt-12 pb-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-gray-400 mb-4">
-            © 2024 Saint Alphonsa School of Nursing. All rights reserved.
-        </p>
-        <p class="text-sm text-gray-500">
+<footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 border-b border-gray-700 pb-10">
+            <div class="md:col-span-1">
+                <h4 class="text-2xl font-bold mb-2 text-primary-color">Saint Alphonsa</h4>
+                <p class="text-sm text-gray-400">A commitment to health and humanity.</p>
+                <p class="mt-4 text-xs text-gray-500">Developed by Neocx Innovative Educations Private Limited</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="index.html#home" class="hover:text-primary-color transition duration-200">Home</a></li>
+                    <li><a href="index.html#chairman" class="hover:text-primary-color transition duration-200">Chairman's Message</a></li>
+                    <li><a href="index.html#gnm" class="hover:text-primary-color transition duration-200">GNM Program Details</a></li>
+                    <li><a href="index.html#facilities" class="hover:text-primary-color transition duration-200">Our Facilities</a></li>
+                    <li><a href="index.html#admissions" class="hover:text-primary-color transition duration-200">Admissions</a></li>
+                    <li><a href="index.html#contact" class="hover:text-primary-color transition duration-200">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Get in Touch</h4>
+                <p class="mb-2 text-gray-400 flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Bengaluru, Karnataka, India - 560072
+                </p>
+                <p class="mb-2 text-gray-400 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <a href="mailto:admissions.saintalphonsa@gmail.com" class="hover:text-primary-color transition duration-200">admissions.saintalphonsa@gmail.com</a>
+                </p>
+                <p class="text-gray-400 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-primary-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:+919986433333" class="hover:text-primary-color transition duration-200">+91 99864 33333</a>
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Location</h4>
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    frameborder="0" 
+                    style="border:0; border-radius: 0.5rem;" 
+                    src="https://maps.google.com/maps?q=12.9601044,77.5114192&z=15&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            © 2024 Saint Alphonsa School of Nursing. All rights reserved.<br>
             Clinical excellence through trusted hospital partnerships
-        </p>
+        </div>
     </div>
 </footer>
+
+<!-- Scroll to Top + JS -->
+<button id="scroll-to-top" class="fixed bottom-6 right-6 bg-primary-color text-white p-3 rounded-full shadow-lg opacity-0 invisible transition duration-300 hover:bg-[#8D1929] z-40">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openMenuBtn = document.getElementById('open-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    const toggleMenu = () => {
+        if (mobileMenu.classList.contains('-translate-x-full')) {
+            mobileMenu.classList.remove('-translate-x-full');
+            document.body.style.overflow = 'hidden';
+        } else {
+            mobileMenu.classList.add('-translate-x-full');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (openMenuBtn) openMenuBtn.addEventListener('click', toggleMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('-translate-x-full')) {
+                mobileMenu.classList.add('-translate-x-full');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+            scrollToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+            scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            scrollToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+    };
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+</script>
 
 </body>
 </html>
