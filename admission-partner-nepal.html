@@ -34,6 +34,23 @@
         [id] {
             scroll-margin-top: 72px;
         }
+        /* Videos were recorded in portrait but stored sideways: turn the player upright */
+        .video-frame {
+            position: relative;
+            aspect-ratio: 9 / 16;
+            overflow: hidden;
+            background: #000;
+            border-radius: 0.5rem;
+        }
+        .video-frame iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 177.78%;
+            height: 56.25%;
+            border: 0;
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -75,7 +92,6 @@
                 <a href="admission-partner-nepal.html" class="text-sm font-medium whitespace-nowrap transition duration-200 text-yellow-300 underline underline-offset-8 decoration-2" aria-current="page">Nepal Admissions</a>
                 <a href="hospital-tieups.html" class="text-sm font-medium whitespace-nowrap transition duration-200 text-white hover:text-yellow-300">Hospital Tie-ups</a>
                 <a href="internship-placements.html" class="text-sm font-medium whitespace-nowrap transition duration-200 text-white hover:text-yellow-300">Internship & Placements</a>
-                <a href="Gallery.html" class="text-sm font-medium whitespace-nowrap transition duration-200 text-white hover:text-yellow-300">Testimonials</a>
                 <a href="#contact" class="text-sm font-medium whitespace-nowrap transition duration-200 text-white hover:text-yellow-300">Contact</a>
             </div>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/viewform" target="_blank" rel="noopener noreferrer"
@@ -114,7 +130,6 @@
             <a href="admission-partner-nepal.html" class="py-3 border-b border-gray-100 font-medium text-[#A51C30] font-semibold" aria-current="page">Nepal Admissions</a>
             <a href="hospital-tieups.html" class="py-3 border-b border-gray-100 font-medium text-gray-800 hover:text-[#A51C30]">Hospital Tie-ups</a>
             <a href="internship-placements.html" class="py-3 border-b border-gray-100 font-medium text-gray-800 hover:text-[#A51C30]">Internship & Placements</a>
-            <a href="Gallery.html" class="py-3 border-b border-gray-100 font-medium text-gray-800 hover:text-[#A51C30]">Testimonials</a>
             <a href="#contact" class="py-3 font-medium text-gray-800 hover:text-[#A51C30]">Contact</a>
         </nav>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1TaTy78_C90YFhvVZBie3gH-7lKOXOrN3cZ25ddjIpWo/viewform" target="_blank" rel="noopener noreferrer"
@@ -132,29 +147,27 @@
         <!-- Partner Intro -->
         <div class="mb-16 text-center">
             <!-- ✅ Fully responsive image -->
-            <img
-                src="https://sixsigmastudyabroad.com/storage/uploads/aboutus/240434VOtlTDnKHn3pVwJdHmOb9lQs3DFCQci5ESy4OiUW.jpg"
-                alt="Six Sigma Education Consultancy"
-                class="mx-auto rounded-xl shadow-lg w-full max-w-3xl h-auto mb-8"
-                loading="lazy"
-                onerror="this.style.display='none'"
-            />
+            <div class="mx-auto max-w-3xl mb-8 rounded-xl shadow-lg overflow-hidden bg-gradient-to-r from-[#A51C30] to-[#8D1929] text-white p-8 sm:p-10">
+                <p class="uppercase tracking-widest text-xs sm:text-sm text-red-100 mb-3">Official Admission Partner</p>
+                <p class="text-2xl sm:text-3xl font-extrabold">Six Sigma Education Consultancy</p>
+                <p class="mt-3 text-red-100">Nepal &rarr; Saint Alphonsa School of Nursing, Bengaluru</p>
+            </div>
             <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
                 We are proud to collaborate with <strong>Six Sigma Education Consultancy</strong>, a trusted education partner based in Nepal, to support aspiring nursing students in their journey toward excellence in healthcare.
             </p>
             <div class="mt-8 flex flex-wrap justify-center gap-8 sm:gap-12">
                 <div class="text-center">
-                    <img src="https://sixsigmastudyabroad.com/frontend/assets/images/icone-user.png" alt="" class="w-12 h-12 mx-auto mb-2" loading="lazy" onerror="this.style.display=\'none\'" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-2 text-[#A51C30]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     <p class="font-bold text-gray-900">40K+</p>
                     <p class="text-sm text-gray-600">Students Guided</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://sixsigmastudyabroad.com/frontend/assets/images/icon-file.png" alt="" class="w-12 h-12 mx-auto mb-2" loading="lazy" onerror="this.style.display=\'none\'" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-2 text-[#A51C30]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
                     <p class="font-bold text-gray-900">50K+</p>
                     <p class="text-sm text-gray-600">Successful Applications</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://sixsigmastudyabroad.com/frontend/assets/images/icon-building.png" alt="" class="w-12 h-12 mx-auto mb-2" loading="lazy" onerror="this.style.display=\'none\'" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-2 text-[#A51C30]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
                     <p class="font-bold text-gray-900">60K+</p>
                     <p class="text-sm text-gray-600">Global Opportunities</p>
                 </div>
@@ -208,142 +221,103 @@
         </div>
     </section>
 
-    <!-- Student Testimonials Section -->
+    <!-- Student Videos Section -->
     <section class="w-full px-4 sm:px-6 lg:px-8 py-16 bg-white">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-gray-900">Student Testimonials</h2>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-gray-900">Hear From Our Students</h2>
         <p class="text-center text-gray-700 mb-12 max-w-4xl mx-auto">
-            Hear from students who successfully enrolled through Six Sigma Education Consultancy and are now thriving at Saint Alphonsa School of Nursing.
+            Short videos from students who joined Saint Alphonsa School of Nursing through Six Sigma Education Consultancy.
         </p>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1iNmWUXlIGPsn7vWsRZLlLizmLoplQp03/preview" title="Student video testimonial 1" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1iNmWUXlIGPsn7vWsRZLlLizmLoplQp03/preview" title="Student video testimonial 1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"Thank you, Six Sigma, for making my dream come true!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1uZ6j_vX8fNMGA8VTQ3dpFW18xxz6CwQX/preview" title="Student video testimonial 2" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1uZ6j_vX8fNMGA8VTQ3dpFW18xxz6CwQX/preview" title="Student video testimonial 2" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"Professional guidance from start to finish!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/14E6HiB0d-FxeBT623CAXNbLani9lXpBw/preview" title="Student video testimonial 3" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/14E6HiB0d-FxeBT623CAXNbLani9lXpBw/preview" title="Student video testimonial 3" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"Highly recommended for every Nepali student!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1dCkemJ2R5aPChj4HkUGW62bnVlt3StAX/preview" title="Student video testimonial 4" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1dCkemJ2R5aPChj4HkUGW62bnVlt3StAX/preview" title="Student video testimonial 4" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"They handled everything so smoothly!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1kPmxgJJZqVoW3Iy1SKy53qX4Z893TWqz/preview" title="Student video testimonial 5" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1kPmxgJJZqVoW3Iy1SKy53qX4Z893TWqz/preview" title="Student video testimonial 5" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"I’m so grateful for this opportunity!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1AZmHKSrG9yKbStHVVBQiwJ47pl_tNr5I/preview" title="Student video testimonial 6" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1AZmHKSrG9yKbStHVVBQiwJ47pl_tNr5I/preview" title="Student video testimonial 6" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"Best support team ever!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1KSpUgeXZfbdMqpaSLsONBk87bSeU52XT/preview" title="Student video testimonial 7" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1KSpUgeXZfbdMqpaSLsONBk87bSeU52XT/preview" title="Student video testimonial 7" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"They made the impossible possible!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1yVs8HlQz0Y2lgZlk2aOSbyRzx_XWP4-U/preview" title="Student video testimonial 8" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1yVs8HlQz0Y2lgZlk2aOSbyRzx_XWP4-U/preview" title="Student video testimonial 8" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"From Nepal to Bengaluru — seamless transition!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1XP21tmHUJQlpa-nJYrCNUBfDSe8PR1nH/preview" title="Student video testimonial 9" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1XP21tmHUJQlpa-nJYrCNUBfDSe8PR1nH/preview" title="Student video testimonial 9" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"My journey started with Six Sigma!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/11I_ERWO6bU049EtT40Dht0-X1kHf62Ea/preview" title="Student video testimonial 10" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/11I_ERWO6bU049EtT40Dht0-X1kHf62Ea/preview" title="Student video testimonial 10" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"Trusted, reliable, and supportive!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1S6FelYq4cIfc-42fbSwNV_7krs5aV-3H/preview" title="Student video testimonial 11" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1S6FelYq4cIfc-42fbSwNV_7krs5aV-3H/preview" title="Student video testimonial 11" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"I couldn’t have done it without them!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/1NeDWV-_Biet867SozA3xpKVp8_eyUY2P/preview" title="Student video testimonial 12" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/1NeDWV-_Biet867SozA3xpKVp8_eyUY2P/preview" title="Student video testimonial 12" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"Now I’m living my nursing dream!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
 
             <figure class="bg-gray-50 rounded-xl shadow-lg p-4 flex flex-col">
-                <div class="relative w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/17pwjkreDcWQqZK18vSdOD4D7JtTwtkHr/preview" title="Student video testimonial 13" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-frame">
+                    <iframe src="https://drive.google.com/file/d/17pwjkreDcWQqZK18vSdOD4D7JtTwtkHr/preview" title="Student video testimonial 13" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <figcaption class="mt-4">
-                    <blockquote class="text-gray-800 font-medium">"This is the best decision I’ve ever made!"</blockquote>
-                    <p class="text-sm text-gray-600 mt-1">— Saint Alphonsa Student (via Six Sigma)</p>
-                </figcaption>
+                <figcaption class="mt-3 text-sm text-gray-600 text-center">Saint Alphonsa student</figcaption>
             </figure>
         </div>
     </section>
@@ -367,7 +341,6 @@
                     <li><a href="admission-partner-nepal.html" class="hover:text-white transition duration-200">Nepal Admissions</a></li>
                     <li><a href="hospital-tieups.html" class="hover:text-white transition duration-200">Hospital Tie-ups</a></li>
                     <li><a href="internship-placements.html" class="hover:text-white transition duration-200">Internship & Placements</a></li>
-                    <li><a href="Gallery.html" class="hover:text-white transition duration-200">Testimonials</a></li>
                 </ul>
             </div>
             <div>
